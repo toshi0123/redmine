@@ -7,6 +7,7 @@ RUN apk upgrade --no-cache && \
       ruby-rmagick \
       ruby-json \
       libc6-compat \
+      imagemagick6 \
       tzdata
 
 COPY assets /home/build/assets/
