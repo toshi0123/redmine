@@ -38,8 +38,5 @@ https://github.com/alexbevi/redmine_knowledgebase.git
 https://github.com/paginagmbh/redmine_lightbox2.git
 https://github.com/Restream/redmine_tagging.git
 https://github.com/ncoders/redmine_local_avatars.git
+https://github.com/haru/redmine_theme_changer.git
 EOF
-
-wget https://bitbucket.org/haru_iida/redmine_theme_changer/downloads/redmine_theme_changer-0.2.0.zip -O redmine_theme_changer-0.2.0.zip
-unzip redmine_theme_changer-0.2.0.zip
-rm -f redmine_theme_changer-0.2.0.zip
