@@ -11,7 +11,6 @@ apk add --no-cache --virtual .builddev \
   cmake \
   mariadb-dev \
   linux-headers \
-  imagemagick-dev \
   coreutils
 
 cd /home/redmine/
