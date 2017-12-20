@@ -9,7 +9,8 @@ apk add --no-cache --virtual .builddev \
   mariadb-dev \
   linux-headers \
   coreutils \
-  git
+  git \
+  wget ca-certificates unzip
 
 # Download
 ash -ex /home/build/assets/build/download.sh
