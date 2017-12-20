@@ -5,6 +5,7 @@ RUN apk upgrade --no-cache && \
       sudo \
       ruby ruby-bundler ruby-bigdecimal \
       ruby-rmagick \
+      ruby-json \
       libc6-compat \
       tzdata
 
