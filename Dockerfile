@@ -4,7 +4,6 @@ RUN apk upgrade --no-cache && \
     apk add --no-cache \
       vim \
       sudo \
-      git \
       ruby ruby-bundler ruby-bigdecimal \
       ruby-rmagick \
       libc6-compat \
