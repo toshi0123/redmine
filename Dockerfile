@@ -13,7 +13,7 @@ COPY assets /home/redmine/assets/
 
 RUN adduser -s /bin/sh -g 'redmine' -D redmine; \
     chown -R redmine:redmine /home/redmine; \
-    ash -ex /home/git/assets/build/install.sh
+    ash -ex /home/redmine/assets/build/install.sh
 
 ENTRYPOINT ["/home/redmine/assets/runtime/docker-entrypoint.sh"]
 
