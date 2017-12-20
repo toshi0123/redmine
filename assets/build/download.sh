@@ -31,5 +31,4 @@ https://github.com/akiko-pusu/redmine_issue_templates.git
 https://github.com/alexbevi/redmine_knowledgebase.git
 https://github.com/paginagmbh/redmine_lightbox2.git
 https://github.com/Restream/redmine_tagging.git
-https://bitbucket.org/haru_iida/redmine_theme_changer.git
 EOF
