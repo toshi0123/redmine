@@ -7,8 +7,7 @@ RUN apk upgrade --no-cache && \
       git \
       ruby ruby-bundler ruby-rdoc ruby-rake ruby-bigdecimal ruby-irb \
       ruby-rmagick \
-      tzdata \
-      imagemagick
+      tzdata
 
 COPY assets /home/build/assets/
 
