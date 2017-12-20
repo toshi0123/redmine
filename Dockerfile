@@ -2,7 +2,6 @@ FROM alpine:edge
 
 RUN apk upgrade --no-cache && \
     apk add --no-cache \
-      vim \
       sudo \
       ruby ruby-bundler ruby-bigdecimal \
       ruby-rmagick \
