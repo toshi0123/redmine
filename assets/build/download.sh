@@ -40,3 +40,5 @@ https://github.com/Restream/redmine_tagging.git
 https://github.com/ncoders/redmine_local_avatars.git
 https://github.com/haru/redmine_theme_changer.git
 EOF
+
+sudo -u redmine -H git clone --depth 1 -b redmine-3.4-3 -v https://github.com/previousnext/redmine_backlogs.git
