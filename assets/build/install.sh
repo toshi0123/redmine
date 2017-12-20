@@ -24,6 +24,9 @@ bundle install --without development test -j$(nproc)
 chown -R redmine:redmine files log tmp public/plugin_assets
 chmod -R 755 files log tmp public/plugin_assets
 
+# Clean up
+ash -x  /home/build/assets/build/clean_up.sh
+
 # Remove build dependencies
 apk del --no-cache .builddev
 
