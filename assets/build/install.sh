@@ -19,7 +19,7 @@ sudo -u redmine -H echo "install: --no-document" > ~/.gemrc
 
 sudo -u redmine -H cp config/database.yml.example config/database.yml
 
-bundle install --without development test --trace
+bundle install --without development test -j$(nproc)
 
 chown -R redmine:redmine files log tmp public/plugin_assets
 chmod -R 755 files log tmp public/plugin_assets
