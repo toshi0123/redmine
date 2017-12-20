@@ -37,12 +37,9 @@ https://github.com/akiko-pusu/redmine_issue_templates.git
 https://github.com/alexbevi/redmine_knowledgebase.git
 https://github.com/paginagmbh/redmine_lightbox2.git
 https://github.com/Restream/redmine_tagging.git
+https://github.com/ncoders/redmine_local_avatars.git
 EOF
 
 wget https://bitbucket.org/haru_iida/redmine_theme_changer/downloads/redmine_theme_changer-0.2.0.zip -O redmine_theme_changer-0.2.0.zip
 unzip redmine_theme_changer-0.2.0.zip
 rm -f redmine_theme_changer-0.2.0.zip
-
-wget http://launchpad.net/redminelocalavatars/trunk/0.1.1/+download/redmine_local_avatars-0.1.1.tar.gz -O redmine_local_avatars-0.1.1.tar.gz
-tar zxf redmine_local_avatars-0.1.1.tar.gz
-rm -f redmine_local_avatars-0.1.1.tar.gz
