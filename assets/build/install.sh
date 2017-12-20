@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Download
-ash -ex /home/build/assets/build/download.sh
-
 # Prepare for install
 apk add --no-cache --virtual .builddev \
   build-base \
@@ -11,7 +8,11 @@ apk add --no-cache --virtual .builddev \
   cmake \
   mariadb-dev \
   linux-headers \
-  coreutils
+  coreutils \
+  git
+
+# Download
+ash -ex /home/build/assets/build/download.sh
 
 cd /home/redmine/
 
