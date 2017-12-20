@@ -20,10 +20,10 @@ production:
   encoding: utf8
 EOF
 
+sudo -u redmine -H bundle exec rake db:migrate RAILS_ENV="production" --trace
+
+sudo -u redmine -H rake generate_secret_token --trace
+
 chown -R redmine:redmine .
-
-bundle exec rake db:migrate RAILS_ENV="production" --trace
-
-rake generate_secret_token --trace
 
 exec sudo -u redmine -H ruby bin/rails server -e production -b 0.0.0.0
