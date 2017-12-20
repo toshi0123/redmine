@@ -9,12 +9,12 @@ RUN apk upgrade --no-cache && \
       tzdata \
       imagemagick
 
-COPY assets /home/redmine/assets/
+COPY assets /home/build/assets/
 
 RUN adduser -s /bin/sh -g 'redmine' -D redmine; \
     chown -R redmine:redmine /home/redmine; \
-    ash -ex /home/redmine/assets/build/install.sh
+    ash -ex /home/build/assets/build/install.sh
 
-ENTRYPOINT ["/home/redmine/assets/runtime/docker-entrypoint.sh"]
+ENTRYPOINT ["/home/build/assets/runtime/docker-entrypoint.sh"]
 
 EXPOSE 3000/tcp
