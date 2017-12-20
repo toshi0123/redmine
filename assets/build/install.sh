@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Download
-ash -ex /home/redmine/assets/build/download.sh
+ash -ex /home/build/assets/build/download.sh
 
 # Prepare for install
 apk add --no-cache --virtual .builddev \
