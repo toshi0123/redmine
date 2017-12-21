@@ -30,7 +30,6 @@ cd /home/redmine/plugins
 while read line;do
  sudo -u redmine -H git clone --depth 1 -v $line
 done<<EOF
-https://github.com/sciyoshi/redmine-slack.git
 https://github.com/hokkey/redmine_chatwork.git
 https://github.com/hidakatsuya/redmine_default_custom_query.git
 https://github.com/akiko-pusu/redmine_issue_templates.git
@@ -41,4 +40,5 @@ https://github.com/ncoders/redmine_local_avatars.git
 https://github.com/haru/redmine_theme_changer.git
 EOF
 
+sudo -u redmine -H git clone --depth 1 -v https://github.com/sciyoshi/redmine-slack.git redmine_slack
 sudo -u redmine -H git clone --depth 1 -b develop -v https://github.com/TheMagician1/redmine_backlogs.git
