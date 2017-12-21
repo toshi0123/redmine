@@ -38,6 +38,7 @@ https://github.com/paginagmbh/redmine_lightbox2.git
 https://github.com/Restream/redmine_tagging.git
 https://github.com/ncoders/redmine_local_avatars.git
 https://github.com/haru/redmine_theme_changer.git
+https://github.com/suer/redmine_absolute_dates.git
 EOF
 
 sudo -u redmine -H git clone --depth 1 -v https://github.com/sciyoshi/redmine-slack.git redmine_slack
