@@ -9,7 +9,22 @@ echo "Downloading redmine ${TAG}"
 
 sudo -u redmine -H git clone --depth 1 -b ${TAG} https://github.com/redmine/redmine.git redmine -v
 
-sed -i '/ALLOWED_TAGS/s/%w(redpre pre code kbd notextile)/%w(redpre pre code kbd notextile br)/g' /home/redmine/lib/redmine/wiki_formatting/textile/redcloth3.rb
+cat <<EOF | patch -N /home/redmine/lib/redmine/wiki_formatting/macros.rb
+--- macros.rb.org
++++ macros.rb
+@@ -168,6 +168,11 @@
+         )
+       end
+
++      desc "BR."
++      macro :BR do |obj, args|
++        raw "<BR>"
++      end
++
+       desc "Displays a list of all available macros, including description if available."
+       macro :macro_list do |obj, args|
+         out = ''.html_safe
+EOF
 
 cd /home/redmine/public/themes
 while read line;do
