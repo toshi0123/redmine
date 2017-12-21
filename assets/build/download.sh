@@ -39,6 +39,13 @@ https://github.com/Restream/redmine_tagging.git
 https://github.com/ncoders/redmine_local_avatars.git
 https://github.com/haru/redmine_theme_changer.git
 https://github.com/suer/redmine_absolute_dates.git
+https://github.com/akiko-pusu/redmine_banner.git
+https://github.com/suer/redmine_issues_summary_graph.git
+https://github.com/Loriowar/redmine_issues_tree.git
+https://github.com/ameya86/redmine_maintenance.git
+https://github.com/deecay/redmine_pivot_table.git
+https://github.com/tkusukawa/redmine_wiki_lists.git
+https://github.com/bdemirkir/sidebar_hide.git
 EOF
 
 sudo -u redmine -H git clone --depth 1 -v https://github.com/sciyoshi/redmine-slack.git redmine_slack
