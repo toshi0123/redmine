@@ -50,3 +50,26 @@ EOF
 
 sudo -u redmine -H git clone --depth 1 -v https://github.com/sciyoshi/redmine-slack.git redmine_slack
 sudo -u redmine -H git clone --depth 1 -b develop -v https://github.com/TheMagician1/redmine_backlogs.git
+
+cat <<EOF | patch -N /home/redmine/plugins/redmine_backlogs/lib/backlogs_setup.rb
+--- backlogs_setup.rb.org
++++ backlogs_setup.rb
+@@ -30,14 +30,7 @@
+   module_function :"development?"
+
+   def platform_support(raise_error = false)
+-    travis = nil # needed so versions isn't block-scoped in the timeout
+-    begin
+-      ReliableTimout.timeout(10) { travis = YAML::load(open('https://raw.githubusercontent.com/themagician1/redmine_backlogs/master/.travis.yml').read) }
+-      Rails.logger.warn "Used remote travis.yml"
+-    rescue => e
+-      travis = YAML::load(File.open(File.join(File.dirname(__FILE__), '..', '.travis.yml')).read)
+-      Rails.logger.warn "Used local travis.yml: #{e}"
+-    end
++    travis = YAML::load(File.open(File.join(File.dirname(__FILE__), '..', '.travis.yml')).read)
+
+     matrix = []
+     travis['rvm'].each{|rvm|
+EOF
+
+ls -l /home/redmine/plugins/redmine_backlogs/lib/
