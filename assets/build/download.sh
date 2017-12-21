@@ -56,7 +56,6 @@ https://github.com/haru/redmine_theme_changer.git
 https://github.com/suer/redmine_absolute_dates.git
 https://github.com/akiko-pusu/redmine_banner.git
 https://github.com/suer/redmine_issues_summary_graph.git
-https://github.com/Loriowar/redmine_issues_tree.git
 https://github.com/ameya86/redmine_maintenance.git
 https://github.com/deecay/redmine_pivot_table.git
 https://github.com/tkusukawa/redmine_wiki_lists.git
