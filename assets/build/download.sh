@@ -51,7 +51,6 @@ https://github.com/hokkey/redmine_chatwork.git
 https://github.com/hidakatsuya/redmine_default_custom_query.git
 https://github.com/akiko-pusu/redmine_issue_templates.git
 https://github.com/paginagmbh/redmine_lightbox2.git
-https://github.com/Restream/redmine_tagging.git
 https://github.com/ncoders/redmine_local_avatars.git
 https://github.com/haru/redmine_theme_changer.git
 https://github.com/suer/redmine_absolute_dates.git
