@@ -9,6 +9,20 @@ echo "Downloading redmine ${TAG}"
 
 sudo -u redmine -H git clone --depth 1 -b ${TAG} https://github.com/redmine/redmine.git redmine -v
 
+cat <<EOF | patch -N /home/redmine/lib/redmine/wiki_formatting/textile/redcloth3.rb
+--- ./lib/redmine/wiki_formatting/textile/redcloth3.rb.org
++++ ./lib/redmine/wiki_formatting/textile/redcloth3.rb
+@@ -1211,7 +1211,7 @@
+     end
+
+
+-    ALLOWED_TAGS = %w(redpre pre code kbd notextile)
++    ALLOWED_TAGS = %w(redpre pre code kbd notextile br)
+     def escape_html_tags(text)
+       text.gsub!(%r{<(\/?([!\w]+)[^<>\n]*)(>?)}) {|m| ALLOWED_TAGS.include?($2) ? "<#{$1}#{$3}" : "&lt;#{$1}#{'&gt;' unless $3.blank?}" }
+     end
+EOF
+
 cd /home/redmine/public/themes
 while read line;do
  sudo -u redmine -H git clone --depth 1 -v $line
