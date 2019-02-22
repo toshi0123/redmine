@@ -59,7 +59,6 @@ https://github.com/suer/redmine_issues_summary_graph.git
 https://github.com/ameya86/redmine_maintenance.git
 https://github.com/deecay/redmine_pivot_table.git
 https://github.com/tkusukawa/redmine_wiki_lists.git
-https://github.com/bdemirkir/sidebar_hide.git
 EOF
 
 sudo -u redmine -H git clone --depth 1 -v https://github.com/sciyoshi/redmine-slack.git redmine_slack
